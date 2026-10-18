@@ -4,15 +4,14 @@ Sebagaimana ketika web development kita bisa langsung mengecek perubahan kode pa
 
 Berikut list cara setup mobile development pada dokumentasi ini:
 - [#RN Configuration dengan EAS](#rn-configuration-dengan-eas)
-	- [#Catatan](#catatan)
-	- [#Trivia](#trivia)
-	- [#Useful command (Commonly Used)](#useful-command-commonly-used)
-	- [#Dokumentasi](#dokumentasi)
+	- [#Catatan EAS](#catatan-eas)
+	- [#Trivia EAS](#trivia-eas)
+	- [#Useful command (Commonly Used) EAS](#useful-command-commonly-used-eas)
+	- [#Dokumentasi EAS](#dokumentasi-eas)
 - [#RN Configuration Over ADB](#rn-configuration-over-adb)
-	- [#Catatan](#catatan)
-	- [#Trivia](#trivia)
-	- [#Useful command (Commonly Used)](#useful-command-commonly-used)
-	- [#Dokumentasi](#dokumentasi)
+	- [#Catatan ADB](#catatan-adb)
+	- [#Trivia ADB](#trivia-adb)
+	- [#Useful command (Commonly Used) ADB](#useful-command-commonly-used-adb)
 
 ---
 ## RN Configuration dengan EAS
@@ -23,13 +22,14 @@ Expo menawarkan dua cara untuk configurasi antara mobile dan desktop, yang diman
 
 https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-build
 
-### Catatan
+### Catatan EAS
 - pastikan baca setup di terminal nya. ada beberapa user promt. enter saja / ketik y
 - pastikan handphone dan laptop ada di satu jaringan yang sama (i.e. wifi yang sama)
 - pastikan port yang digunakan rn dibuka (biasanya default di blokir firewall)
 - karena membuka port pada desktop, maka rentan untuk serangan. Selain itu orang lain bisa saja membuka apps yang kita develop (karena share network / over wifi)
+- build project nya sekitaran 17 - 20 menitan
 
-### Trivia
+### Trivia EAS
 - kita bisa menggunakan command berikut untuk menjalankan koneksi ke server i.e. (desktop dan mobile) tanpa harus  berada di satu network yang sama. Throwback nya adalah koneksi hot reload (update dari kode ke development environment) akan terasa lebih lambat:
   ```bash
   # Gunakan QR-code pada mobile agar mempermudah
@@ -38,7 +38,7 @@ https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-buil
   npx expo start --tunnel
   ```
 
-### Useful command (Commonly Used)
+### Useful command (Commonly Used) EAS
 ```bash
 # Start dev server
 npx expo start
@@ -50,7 +50,7 @@ npx expo start --clear
 npx expo start --dev-client
 ```
 
-### Dokumentasi
+### Dokumentasi EAS
 #### Expo Landing Page
 ![Expo landing page](images/Pasted%20image%2020261017223750.png)
 
@@ -67,18 +67,24 @@ Terdapat dua cara untuk menjalankan via ADB ini, yaitu dengan cable USB dari des
 Berikut merupakan link dokumentasi untuk men-setup nya:
 https://reactnative.dev/docs/set-up-your-environment
 
-### Catatan
+### Catatan ADB
 - Recommended device dengan RAM 16gb atau lebih tinggi
 - 10 - 20gb free disk
 - Pastikan java 17 se terinstall dan terbaca di terminal (official docs state harus java 17)
 
-### Trivia
+### Trivia ADB
 - Konsumsi RAM bisa kita tekan dengan tanpa menggunakan virtualisasi android (cable usb ke mobile). Cek bagan **Using a physical device** pada laman di atas
 - Jika menggunakan pysical device (poin pertama) opsi AVD (Android Virtual Device) pada saat awal instalasi android studio, bisa kita un-check aja 
 
-### Useful command (Commonly Used)
+### Useful command (Commonly Used) ADB
 ```bash
+# run dengan
+npm run android
 
+# atau
+npm expo start
+a
+
+# atau lagi
+npm expo start --dev-client
 ```
-
-### Dokumentasi
