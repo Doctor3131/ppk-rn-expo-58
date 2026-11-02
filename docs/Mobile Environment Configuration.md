@@ -52,7 +52,7 @@ npx expo start --dev-client
 
 ### Dokumentasi EAS
 #### Expo Landing Page
-![Expo landing page](images/Pasted%20image%2020261017223750.png)
+![Expo landing page|700](images/Pasted%20image%2020261017223750.png)
 
 #### Expo App Build Succesful
 ![Expo app build successful](images/Pasted%20image%2020261017224051.png)
