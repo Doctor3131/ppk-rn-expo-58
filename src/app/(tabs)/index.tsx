@@ -1,30 +1,15 @@
-import { useEffect, useState } from 'react';
-import { ActivityIndicator, Button, StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useRouter } from 'expo-router';
+import { useContext, useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { AuthContext } from '../_layout';
 import {
   getAuth,
-  onAuthStateChanged,
   signOut,
 } from '@react-native-firebase/auth';
 
 export default function HomeScreen() {
-  const router = useRouter();
-  const [user, setUser] = useState(() => getAuth().currentUser);
-  const [authReady, setAuthReady] = useState(false);
+  const user = useContext(AuthContext);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState('');
-
-  useEffect(
-    () =>
-      // Jaga halaman beranda tetap hanya bisa diakses selama sesi aktif.
-      onAuthStateChanged(getAuth(), (currentUser) => {
-        setUser(currentUser);
-        setAuthReady(true);
-        if (!currentUser) router.replace('/');
-      }),
-    [router],
-  );
 
   async function logout() {
     setBusy(true);
@@ -39,17 +24,10 @@ export default function HomeScreen() {
     }
   }
 
-  if (!authReady || !user) {
-    return (
-      <SafeAreaView style={styles.container}>
-        <ActivityIndicator />
-        <Text>Memeriksa sesi...</Text>
-      </SafeAreaView>
-    );
-  }
+  if (!user) return null;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Beranda</Text>
         <Text>Login berhasil.</Text>
@@ -63,7 +41,7 @@ export default function HomeScreen() {
         />
         {!!message && <Text>{message}</Text>}
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 
