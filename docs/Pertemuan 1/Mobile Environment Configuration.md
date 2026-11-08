@@ -3,15 +3,15 @@
 Sebagaimana ketika web development kita bisa langsung mengecek perubahan kode pada browser via development setup, pada mobile (terutama react native) kita juga bisa membuat aplikasi untuk **hot reload** yang terkoneksi dengan kode kita di desktop (server).
 
 Berikut list cara setup mobile development pada dokumentasi ini:
-- [#RN Configuration dengan EAS](#rn-configuration-dengan-eas)
-	- [#Catatan EAS](#catatan-eas)
-	- [#Trivia EAS](#trivia-eas)
-	- [#Useful command (Commonly Used) EAS](#useful-command-commonly-used-eas)
-	- [#Dokumentasi EAS](#dokumentasi-eas)
-- [#RN Configuration Over ADB](#rn-configuration-over-adb)
-	- [#Catatan ADB](#catatan-adb)
-	- [#Trivia ADB](#trivia-adb)
-	- [#Useful command (Commonly Used) ADB](#useful-command-commonly-used-adb)
+- [RN Configuration dengan EAS](#rn-configuration-dengan-eas)
+	- [Catatan EAS](#catatan-eas)
+	- [Trivia EAS](#trivia-eas)
+	- [Useful command (Commonly Used) EAS](#useful-command-commonly-used-eas)
+	- [Dokumentasi EAS](#dokumentasi-eas)
+- [RN Configuration Over ADB](#rn-configuration-over-adb)
+	- [Catatan ADB](#catatan-adb)
+	- [Trivia ADB](#trivia-adb)
+	- [Useful command (Commonly Used) ADB](#useful-command-commonly-used-adb)
 
 ---
 ## RN Configuration dengan EAS
@@ -52,7 +52,7 @@ npx expo start --dev-client
 
 ### Dokumentasi EAS
 #### Expo Landing Page
-![Expo landing page|700](images/Pasted%20image%2020261017223750.png)
+![Expo landing page](images/Pasted%20image%2020261017223750.png)
 
 #### Expo App Build Succesful
 ![Expo app build successful](images/Pasted%20image%2020261017224051.png)
