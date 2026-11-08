@@ -9,3 +9,11 @@ Halaman ini menjadi titik awal panduan Firebase untuk aplikasi React Native. Tuj
 5. [Testing Login dan Logout React Native](Testing%20Login%20dan%20Logout%20React%20Native.md)
 
 Model analisis sentimen untuk layar AI tersedia di [Model EDOM](Model%20EDOM.md).
+
+---
+
+[Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Cloud Firestore](Setup Cloud Firestore.md)
+
+---
+
+[Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Project Firebase](Setup%20Project%20Firebase.md)

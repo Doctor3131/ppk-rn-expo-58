@@ -42,3 +42,7 @@ model-edom.zip
    const prediction = classify('komentar untuk dianalisis');
    // prediction.label berisi sentimen hasil analisis
    ```
+
+---
+
+[← Kembali: Beranda Firebase](Firebase%20Console.md) | [Awal: Beranda Firebase](Firebase%20Console.md)

@@ -472,3 +472,7 @@ export const styles = StyleSheet.create({
 Jika HP tidak dapat terhubung, pastikan kedua perangkat benar-benar berada pada LAN yang sama, matikan isolasi client/guest Wi-Fi jika aktif, dan izinkan koneksi Metro melalui firewall komputer.
 
 Contoh ini hanya untuk pengujian. Jangan menanam kredensial akun dalam source code; masukkan melalui form saat aplikasi berjalan.
+
+---
+
+[← Kembali: Hubungkan Firebase ke React Native](Hubungkan%20Firebase%20ke%20React%20Native.md) | [Awal: Beranda Firebase](Firebase%20Console.md)

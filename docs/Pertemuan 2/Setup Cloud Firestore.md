@@ -14,3 +14,11 @@ Panduan ini menyiapkan database Cloud Firestore pada project Firebase. Langkah-l
 4. Pilih mode awal database dan lanjutkan proses pembuatan. Production mode menolak akses sampai Security Rules mengizinkannya.
    ![img/firestore-mode-keamanan.png](img/firestore-mode-keamanan.png)
    > **Gambar:** Pilihan awal Security Rules. Production mode memulai dengan akses ditolak; hindari membuka akses tanpa batas untuk data nyata.
+
+---
+
+[← Kembali: Setup Project Firebase](Setup Project Firebase.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Hubungkan Firebase ke React Native](Hubungkan Firebase ke React Native.md)
+
+---
+
+[← Kembali: Setup Project Firebase](Setup%20Project%20Firebase.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Authentication](Setup%20Authentication.md)

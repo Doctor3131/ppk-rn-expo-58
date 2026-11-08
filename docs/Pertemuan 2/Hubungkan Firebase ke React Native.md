@@ -20,3 +20,11 @@ Contoh dan screenshot di bawah menggunakan aplikasi Android.
    ![img/react-native-app-json-google-services-file.png](img/react-native-app-json-google-services-file.png)
    ![img/react-native-app-json-konfigurasi-akhir.png](img/react-native-app-json-konfigurasi-akhir.png)
    > **Gambar:** Contoh konfigurasi akhir `app.json`. Setelah perubahan konfigurasi native, jalankan ulang build aplikasi agar perubahan diterapkan.
+
+---
+
+[← Kembali: Setup Authentication](Setup Authentication.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Model EDOM](Model EDOM.md)
+
+---
+
+[← Kembali: Setup Authentication](Setup%20Authentication.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Testing Login dan Logout](Testing%20Login%20dan%20Logout%20React%20Native.md)

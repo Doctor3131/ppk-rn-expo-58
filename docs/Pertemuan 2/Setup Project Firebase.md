@@ -18,3 +18,11 @@ Panduan ini menjelaskan pembuatan project Firebase baru dari Console. Tujuannya 
 4. Setelah selesai, halaman utama project Firebase akan terbuka.
    ![img/firebase-project-halaman-utama.png](img/firebase-project-halaman-utama.png)
    > **Gambar:** Halaman utama project. Dari sini layanan seperti Firestore, Authentication, dan pengaturan aplikasi dapat dibuka.
+
+---
+
+[← Kembali: Beranda Firebase](Firebase Console.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Authentication](Setup Authentication.md)
+
+---
+
+[← Kembali: Beranda Firebase](Firebase%20Console.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Cloud Firestore](Setup%20Cloud%20Firestore.md)
