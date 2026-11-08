@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Button, Modal, StyleSheet, Text, TextInput, View } from 'react-native';
+import { KeyboardAvoidingView, Modal, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { createSentimentClassifier } from '../../../ai/sentiment.js';
 import model from '../../../ai/model-edom.json';
+import { colors, styles } from '../../theme';
 
+// Siapkan model sekali di luar komponen agar tidak dibuat ulang setiap kali pengguna mengetik.
 const classify = createSentimentClassifier(model);
 
 export default function TestAiScreen() {
@@ -10,8 +12,10 @@ export default function TestAiScreen() {
   const [result, setResult] = useState('');
 
   function analyze() {
+    // Analisis berjalan lokal menggunakan model JSON yang disertakan dalam aplikasi.
     const prediction = classify(comment);
-    const note = prediction.experimental ? '\n\nHasil ini bersifat eksperimental.' : '';
+    // Jelaskan keterbatasan hasil eksperimen dan beri pesan pengganti jika label tidak tersedia.
+    const note = prediction.experimental ? '\n\n(integrasi berhasil)\nHasil ini bersifat eksperimental.' : '';
     setResult(
       prediction.label
         ? `Sentimen: ${prediction.label}${note}`
@@ -20,43 +24,66 @@ export default function TestAiScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Analisis Sentimen</Text>
-      <Text>Masukkan komentar untuk dianalisis:</Text>
-      <TextInput
-        accessibilityLabel="Komentar untuk analisis sentimen"
-        style={styles.input}
-        value={comment}
-        onChangeText={setComment}
-        placeholder="Tulis komentar di sini..."
-        multiline
-        textAlignVertical="top"
-      />
-      <Button title="Analisis komentar" onPress={analyze} />
+    // Form tetap dapat digulir saat keyboard mengurangi ruang layar.
+    <KeyboardAvoidingView style={styles.screen} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+      <View style={styles.background} pointerEvents="none" accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+        <View style={styles.peach} />
+        <View style={styles.teal} />
+      </View>
+      <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
+        <View style={styles.shadow}>
+          <View style={styles.card}>
+            <Text style={[styles.title, localStyles.title]}>Test Integrasi AI</Text>
+            <Text style={styles.muted}>Tulis komentar dan temukan sentimen di dalamnya.</Text>
+            <TextInput
+              accessibilityLabel="Komentar untuk analisis sentimen"
+              style={[styles.input, localStyles.multiline]}
+              placeholderTextColor={colors.muted}
+              selectionColor={colors.teal}
+              value={comment}
+              onChangeText={setComment}
+              placeholder="Tulis komentar di sini..."
+              multiline
+              textAlignVertical="top"
+            />
+            <Pressable accessibilityRole="button" onPress={analyze} style={({ pressed }) => [styles.button, { opacity: pressed ? 0.8 : 1 }]}>
+              <Text style={styles.buttonLabel}>Analisis komentar</Text>
+            </Pressable>
+          </View>
+        </View>
+      </ScrollView>
 
+      {/* Hasil disimpan terpisah dari komentar; menutup modal tidak menghapus input pengguna. */}
       <Modal
         transparent
         animationType="fade"
         visible={!!result}
         onRequestClose={() => setResult('')}
       >
-        <View style={styles.backdrop}>
-          <View style={styles.modal}>
-            <Text style={styles.modalTitle}>Hasil Analisis</Text>
-            <Text>{result}</Text>
-            <Button title="Tutup" onPress={() => setResult('')} />
+        <View style={styles.screen}>
+          <View style={styles.background} pointerEvents="none" accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+            <View style={styles.peach} />
+            <View style={styles.teal} />
           </View>
+          <ScrollView contentContainerStyle={styles.content}>
+            <View style={styles.shadow}>
+              <View style={styles.card}>
+                <Text style={styles.subtitle}>Ringkasan sentimen</Text>
+                <Text style={styles.text}>{result}</Text>
+                <Pressable accessibilityRole="button" onPress={() => setResult('')} style={({ pressed }) => [styles.button, { opacity: pressed ? 0.8 : 1 }]}>
+                  <Text style={styles.buttonLabel}>Tutup</Text>
+                </Pressable>
+              </View>
+            </View>
+          </ScrollView>
         </View>
       </Modal>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', padding: 24, gap: 14 },
-  title: { fontSize: 24, fontWeight: 'bold' },
-  input: { minHeight: 120, borderWidth: 1, borderColor: '#888', borderRadius: 6, padding: 12 },
-  backdrop: { flex: 1, justifyContent: 'center', padding: 24, backgroundColor: 'rgba(0, 0, 0, 0.5)' },
-  modal: { gap: 14, padding: 20, borderRadius: 8, backgroundColor: 'white' },
-  modalTitle: { fontSize: 18, fontWeight: 'bold' },
+// Area komentar dibuat lebih tinggi karena menerima teks beberapa baris.
+const localStyles = StyleSheet.create({
+  title: { textAlign: 'center' },
+  multiline: { minHeight: 150 },
 });
