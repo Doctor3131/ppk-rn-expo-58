@@ -12,8 +12,4 @@ Model analisis sentimen untuk layar AI tersedia di [Model EDOM](Model%20EDOM.md)
 
 ---
 
-[Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Cloud Firestore](Setup Cloud Firestore.md)
-
----
-
-[Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Project Firebase](Setup%20Project%20Firebase.md)
+[Lanjut: Setup Project Firebase](Setup%20Project%20Firebase.md)

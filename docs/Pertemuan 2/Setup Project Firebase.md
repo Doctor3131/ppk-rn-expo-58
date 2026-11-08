@@ -21,8 +21,6 @@ Panduan ini menjelaskan pembuatan project Firebase baru dari Console. Tujuannya 
 
 ---
 
-[← Kembali: Beranda Firebase](Firebase Console.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Authentication](Setup Authentication.md)
+[← Kembali: Beranda Firebase](Firebase%20Console.md)
 
----
-
-[← Kembali: Beranda Firebase](Firebase%20Console.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Cloud Firestore](Setup%20Cloud%20Firestore.md)
+[Lanjut: Setup Cloud Firestore](Setup%20Cloud%20Firestore.md)

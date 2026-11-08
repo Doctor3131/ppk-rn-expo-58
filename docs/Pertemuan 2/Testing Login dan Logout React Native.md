@@ -79,7 +79,7 @@ project.ext {
 
 ## Build development client
 
-React Native Firebase memakai native module, jadi aplikasi harus dijalankan sebagai development build, bukan di Expo Go. 
+React Native Firebase memakai native module, jadi aplikasi harus dijalankan sebagai development build, bukan di Expo Go.
 
 Build development client untuk Android:
 
@@ -475,4 +475,8 @@ Contoh ini hanya untuk pengujian. Jangan menanam kredensial akun dalam source co
 
 ---
 
-[← Kembali: Hubungkan Firebase ke React Native](Hubungkan%20Firebase%20ke%20React%20Native.md) | [Awal: Beranda Firebase](Firebase%20Console.md)
+[← Kembali: Hubungkan Firebase ke React Native](Hubungkan%20Firebase%20ke%20React%20Native.md)
+
+[Awal: Beranda Firebase](Firebase%20Console.md)
+
+[Lanjut: Integrasi local AI](Model%20EDOM.md)

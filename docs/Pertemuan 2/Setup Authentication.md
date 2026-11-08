@@ -26,8 +26,8 @@ Panduan ini mengaktifkan Firebase Authentication dengan provider Email/Password 
 
 ---
 
-[← Kembali: Setup Cloud Firestore](Setup Cloud Firestore.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Testing Login dan Logout](Testing Login dan Logout React Native.md)
+[← Kembali: Setup Cloud Firestore](Setup%20Cloud%20Firestore.md)
 
----
+[Awal: Beranda Firebase](Firebase%20Console.md)
 
-[← Kembali: Setup Cloud Firestore](Setup%20Cloud%20Firestore.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Hubungkan Firebase ke React Native](Hubungkan%20Firebase%20ke%20React%20Native.md)
+[Lanjut: Hubungkan Firebase ke React Native](Hubungkan%20Firebase%20ke%20React%20Native.md)

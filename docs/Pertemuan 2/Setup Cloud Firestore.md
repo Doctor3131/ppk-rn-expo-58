@@ -17,8 +17,8 @@ Panduan ini menyiapkan database Cloud Firestore pada project Firebase. Langkah-l
 
 ---
 
-[← Kembali: Setup Project Firebase](Setup Project Firebase.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Hubungkan Firebase ke React Native](Hubungkan Firebase ke React Native.md)
+[← Kembali: Setup Project Firebase](Setup%20Project%20Firebase.md)
 
----
+[Awal: Beranda Firebase](Firebase%20Console.md)
 
-[← Kembali: Setup Project Firebase](Setup%20Project%20Firebase.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Setup Authentication](Setup%20Authentication.md)
+[Lanjut: Setup Authentication](Setup%20Authentication.md)
