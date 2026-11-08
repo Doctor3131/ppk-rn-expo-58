@@ -15,7 +15,7 @@ Contoh dan screenshot di bawah menggunakan aplikasi Android.
    > **Gambar:** Contoh nilai `android.package` yang perlu disalin ke Firebase Console saat registrasi.
 3. Daftarkan aplikasi, unduh `google-services.json`, lalu letakkan file di root project.
    ![img/react-native-google-services-di-root-project.png](img/react-native-google-services-di-root-project.png)
- 
+
 4. Tambahkan konfigurasi `googleServicesFile` di bagian `android` pada `app.json`, kemudian lanjutkan langkah berikutnya di Firebase Console.
    ![img/react-native-app-json-google-services-file.png](img/react-native-app-json-google-services-file.png)
    ![img/react-native-app-json-konfigurasi-akhir.png](img/react-native-app-json-konfigurasi-akhir.png)
@@ -23,8 +23,8 @@ Contoh dan screenshot di bawah menggunakan aplikasi Android.
 
 ---
 
-[← Kembali: Setup Authentication](Setup Authentication.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Model EDOM](Model EDOM.md)
+[Kembali: Setup Authentication](Setup%20Authentication.md)
 
----
+[Awal: Beranda Firebase](Firebase%20Console.md)
 
-[← Kembali: Setup Authentication](Setup%20Authentication.md) | [Awal: Beranda Firebase](Firebase%20Console.md) | [Lanjut: Testing Login dan Logout](Testing%20Login%20dan%20Logout%20React%20Native.md)
+[Lanjut: Testing Login dan Logout](Testing%20Login%20dan%20Logout%20React%20Native.md)

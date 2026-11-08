@@ -26,7 +26,7 @@ Panduan ini mengaktifkan Firebase Authentication dengan provider Email/Password 
 
 ---
 
-[← Kembali: Setup Cloud Firestore](Setup%20Cloud%20Firestore.md)
+[Kembali: Setup Cloud Firestore](Setup%20Cloud%20Firestore.md)
 
 [Awal: Beranda Firebase](Firebase%20Console.md)
 

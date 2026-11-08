@@ -45,4 +45,4 @@ model-edom.zip
 
 ---
 
-[← Kembali: Beranda Firebase](Firebase%20Console.md) | [Awal: Beranda Firebase](Firebase%20Console.md)
+[Kembali: Beranda Firebase](Firebase%20Console.md) | [Awal: Beranda Firebase](Firebase%20Console.md)

@@ -475,7 +475,7 @@ Contoh ini hanya untuk pengujian. Jangan menanam kredensial akun dalam source co
 
 ---
 
-[← Kembali: Hubungkan Firebase ke React Native](Hubungkan%20Firebase%20ke%20React%20Native.md)
+[Kembali: Hubungkan Firebase ke React Native](Hubungkan%20Firebase%20ke%20React%20Native.md)
 
 [Awal: Beranda Firebase](Firebase%20Console.md)
 
