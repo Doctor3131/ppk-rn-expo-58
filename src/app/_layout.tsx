@@ -2,6 +2,7 @@ import { Stack } from 'expo-router';
 import { createContext, useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 import { getAuth, onAuthStateChanged, type User } from '@react-native-firebase/auth';
+
 export const AuthContext = createContext<User | null>(null);
 
 export default function RootLayout() {

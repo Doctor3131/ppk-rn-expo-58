@@ -1,12 +1,5 @@
 import { useState } from 'react';
-import {
-  Button,
-  Modal,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
+import { Button, Modal, StyleSheet, Text, TextInput, View } from 'react-native';
 import { createSentimentClassifier } from '../../../ai/sentiment.js';
 import model from '../../../ai/model-edom.json';
 
@@ -18,29 +11,28 @@ export default function TestAiScreen() {
 
   function analyze() {
     const prediction = classify(comment);
+    const note = prediction.experimental ? '\n\nHasil ini bersifat eksperimental.' : '';
     setResult(
       prediction.label
-        ? `Sentimen: ${prediction.label}${prediction.experimental ? '\n\nHasil ini bersifat eksperimental.' : ''}`
+        ? `Sentimen: ${prediction.label}${note}`
         : 'Komentar belum dapat dianalisis. Coba tulis komentar lain.',
     );
   }
 
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
-        <Text style={styles.title}>Analisis Sentimen</Text>
-        <Text>Masukkan komentar untuk dianalisis:</Text>
-        <TextInput
-          accessibilityLabel="Komentar untuk analisis sentimen"
-          style={styles.input}
-          value={comment}
-          onChangeText={setComment}
-          placeholder="Tulis komentar di sini..."
-          multiline
-          textAlignVertical="top"
-        />
-        <Button title="Analisis komentar" onPress={analyze} />
-      </View>
+      <Text style={styles.title}>Analisis Sentimen</Text>
+      <Text>Masukkan komentar untuk dianalisis:</Text>
+      <TextInput
+        accessibilityLabel="Komentar untuk analisis sentimen"
+        style={styles.input}
+        value={comment}
+        onChangeText={setComment}
+        placeholder="Tulis komentar di sini..."
+        multiline
+        textAlignVertical="top"
+      />
+      <Button title="Analisis komentar" onPress={analyze} />
 
       <Modal
         transparent
@@ -61,8 +53,7 @@ export default function TestAiScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', padding: 24 },
-  content: { gap: 14 },
+  container: { flex: 1, justifyContent: 'center', padding: 24, gap: 14 },
   title: { fontSize: 24, fontWeight: 'bold' },
   input: { minHeight: 120, borderWidth: 1, borderColor: '#888', borderRadius: 6, padding: 12 },
   backdrop: { flex: 1, justifyContent: 'center', padding: 24, backgroundColor: 'rgba(0, 0, 0, 0.5)' },
