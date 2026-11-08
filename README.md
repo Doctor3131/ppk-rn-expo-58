@@ -3,8 +3,9 @@
 Contoh aplikasi React Native (Expo SDK 58) dengan Firebase Auth, analisis sentimen lokal, dan UI modern. Untuk setup pertama kali, ikuti [PPK 101](docs/Pertemuan%201/PPK%20101.md).
 
 ## Folder Pertemuan Praktikum PPK
-- [Pertemuan 1](docs/Pertemuan%201/)
-- [Pertemuan 2](docs/Pertemuan%202/)
+
+- [Pertemuan 1](/docs/Pertemuan%201/PPK%20101.md)
+- [Pertemuan 2](/docs/Pertemuan%202/Firebase%20Console.md)
 
 ## Struktur project (Current Commit)
 
