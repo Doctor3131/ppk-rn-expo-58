@@ -9,13 +9,7 @@ Panduan ini mengaktifkan Firebase Authentication dengan provider Email/Password 
    ![](img/auth-pilih-email-password.png)
    > **Gambar:** Pilih provider **Email/Password** untuk mengizinkan pengguna masuk memakai email dan password.
    ![](img/auth-aktifkan-email-password.png)
-   > **Gambar:** Aktifkan provider Email/Password, lalu tekan **Save** agar metode tersebut dapat digunakan aplikasi.
-   ![](img/auth-metode-login-tersedia.png)
    > **Gambar:** Daftar provider setelah Email/Password aktif; statusnya harus menunjukkan **Enabled**.
-   ![](img/auth-konfigurasi-metode-login.png)
-   > **Gambar:** Panel konfigurasi provider. Pastikan opsi yang diperlukan aktif sebelum menyimpan.
-   ![](img/auth-konfigurasi-anonymous.png)
-   > **Gambar:** Konfigurasi provider Anonymous. Ini adalah opsi terpisah dan tidak diperlukan untuk login Email/Password.
 3. Untuk membuat akun uji, buka tab **Users**, pilih **Add user**, lalu isi email dan password.
    ![](img/auth-daftar-user-kosong.png)
    > **Gambar:** Tab Users saat belum ada akun. Tombol **Add user** dapat dipakai untuk membuat akun uji dari console.

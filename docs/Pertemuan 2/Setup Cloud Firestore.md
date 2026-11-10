@@ -11,9 +11,9 @@ Panduan ini menyiapkan database Cloud Firestore pada project Firebase. Langkah-l
 3. Pilih ID database dan lokasi penyimpanan. Lokasi tidak dapat diubah setelah database dibuat.
    ![img/firestore-pilih-lokasi-database.png](img/firestore-pilih-lokasi-database.png)
    > **Gambar:** Konfigurasi ID dan lokasi database. Pilih lokasi dekat pengguna aplikasi dan pastikan pilihan tepat sebelum lanjut karena tidak dapat diubah kemudian.
-4. Pilih mode awal database dan lanjutkan proses pembuatan. Production mode menolak akses sampai Security Rules mengizinkannya.
+4. Pilih mode awal database dan lanjutkan proses pembuatan.
    ![img/firestore-mode-keamanan.png](img/firestore-mode-keamanan.png)
-   > **Gambar:** Pilihan awal Security Rules. Production mode memulai dengan akses ditolak; hindari membuka akses tanpa batas untuk data nyata.
+   > **Gambar:** Pilihan awal Security Rules. Production mode memulai dengan akses ditolak.
 
 ---
 

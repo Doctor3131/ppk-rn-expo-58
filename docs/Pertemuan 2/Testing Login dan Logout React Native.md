@@ -35,31 +35,7 @@ Jalankan `npx expo install --check` lagi setelah `--fix`; hasilnya harus tidak a
 
 Firebase App dan Auth perlu didaftarkan sebagai plugin agar native module ikut terpasang saat build development. Selain itu default Kotlin Expo 58 adalah 2.2; plugin `plugins/withFirebaseBom.js` pada project ini memaksa versi firebase-bom yang lebih baru (menaikkan versi Kotlin build Gradle ke 2.4) agar konsisten dengan versi React Native Firebase.
 
-Di `app.json`, gabungkan plugin berikut ke konfigurasi yang sudah ada. Jangan mengganti seluruh file atau menghapus plugin lain; jika `plugins` sudah ada, tambahkan entry berikut ke daftar tersebut:
-
-```json
-{
-  "expo": {
-    "android": {
-      "googleServicesFile": "./google-services.json"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "./plugins/withFirebaseBom.js",
-        {
-          "bom": "34.19.0"
-        }
-      ],
-      "@react-native-firebase/app",
-      "@react-native-firebase/auth",
-      "expo-build-properties"
-    ]
-  }
-}
-```
-
-Plugin tersebut ada di file `plugins/withFirebaseBom.js` pada root project:
+Buat folder baru di root project `plugins/` lalu buat file bernama `withFIrebaseBom.js`. Copas code di bawah ke file tersebut. 
 
 ```js
 // plugins/withFirebaseBom.js
@@ -76,6 +52,37 @@ project.ext {
   })
 }
 ```
+
+Di `app.json`, tambahkan kode di bawah ke bagian plugins
+```json
+
+[
+  "./plugins/withFirebaseBom.js",
+  {
+    "bom": "34.19.0"
+  }
+],
+```
+
+Berikut lokasi untuk copas code nya
+```json
+{
+  "expo": {
+    "plugins": [
+
+      [
+        "./plugins/withFirebaseBom.js",
+        {
+          "bom": "34.19.0"
+        }
+      ],
+
+      // line configurasi plugin lainya
+    ]
+}
+```
+
+Lihat [**app.json**](/app.json) untuk implementasi dari step di atas 
 
 ## Build development client
 
@@ -457,6 +464,7 @@ export const styles = StyleSheet.create({
 
 ## Cara menguji
 
+0. Download file build terbaru dari expo 
 1. Pastikan HP Android dan komputer berada pada jaringan Wi-Fi/LAN yang sama.
 2. Jalankan server pengembangan dari root project:
 
@@ -470,8 +478,6 @@ export const styles = StyleSheet.create({
 6. Coba password yang salah atau kosong untuk melihat modal kegagalan login.
 
 Jika HP tidak dapat terhubung, pastikan kedua perangkat benar-benar berada pada LAN yang sama, matikan isolasi client/guest Wi-Fi jika aktif, dan izinkan koneksi Metro melalui firewall komputer.
-
-Contoh ini hanya untuk pengujian. Jangan menanam kredensial akun dalam source code; masukkan melalui form saat aplikasi berjalan.
 
 ---
 

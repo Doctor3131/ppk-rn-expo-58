@@ -13,8 +13,7 @@ Panduan ini menjelaskan pembuatan project Firebase baru dari Console. Tujuannya 
 3. Ikuti langkah setup project. Google Analytics bisa diaktifkan sesuai kebutuhan.
    ![img/firebase-project-siap.png](img/firebase-project-siap.png)
    > **Gambar:** Konfirmasi bahwa project berhasil dibuat. Tekan **Continue** untuk membuka console project.
-   ![img/firebase-project-konfirmasi-setup.png](img/firebase-project-konfirmasi-setup.png)
-   > **Gambar:** Layar ringkasan/konfirmasi project setelah proses pembuatan.
+
 4. Setelah selesai, halaman utama project Firebase akan terbuka.
    ![img/firebase-project-halaman-utama.png](img/firebase-project-halaman-utama.png)
    > **Gambar:** Halaman utama project. Dari sini layanan seperti Firestore, Authentication, dan pengaturan aplikasi dapat dibuka.
