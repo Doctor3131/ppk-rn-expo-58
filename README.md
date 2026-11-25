@@ -1,13 +1,15 @@
 # PPK — React Native Expo 58
 
-Contoh aplikasi React Native (Expo SDK 58) dengan Firebase Auth, analisis sentimen lokal, dan UI modern. Untuk setup pertama kali, ikuti [PPK 101](docs/Pertemuan%201/PPK%20101.md).
+Contoh aplikasi React Native (Expo SDK 58) dengan Firebase Auth dan analisis sentimen lokal. Untuk setup pertama kali, ikuti [PPK 101](docs/Pertemuan%201/PPK%20101.md).
 
 ## Folder Pertemuan Praktikum PPK
 
-- [Pertemuan 1](/docs/Pertemuan%201/PPK%20101.md)
-- [Pertemuan 2](/docs/Pertemuan%202/Firebase%20Console.md)
+- [Pertemuan 1](docs/Pertemuan%201/PPK%20101.md)
+- [Pertemuan 2](docs/Pertemuan%202/Firebase%20Console.md)
+- [Pertemuan 3: Push Notification dan Maps](docs/Pertemuan%203/Push%20%26%20Maps.md)
+- [Pertemuan 4: Payment Gateway dengan Midtrans](docs/Pertemuan%204/Payment%20Gateway.md)
 
-## Struktur project (Current Commit)
+## Struktur project
 
 ```text
 src/
@@ -17,6 +19,7 @@ src/
 │   │   ├── index.tsx       # Beranda: info akun & logout
 │   │   └── testAi.tsx      # Analisis sentimen lokal
 │   ├── _layout.tsx         # Sesi Firebase & proteksi rute
+│   ├── index.tsx           # Prototype live tracking (belum terhubung ke navigasi)
 │   ├── login.tsx           # Form login
 │   └── +not-found.tsx      # Halaman 404
 ├── theme.js                # Warna & style bersama
@@ -27,6 +30,8 @@ src/
 plugins/
 └── withFirebaseBom.js      # Config plugin Firebase BOM (Kotlin 2.4)
 ```
+
+`src/app/index.tsx` berisi prototype live tracking. Layar ini belum didaftarkan pada navigasi aplikasi, dan package peta serta lokasi yang dibutuhkan belum tercantum di `package.json`.
 
 ## Mulai cepat
 
@@ -62,3 +67,5 @@ eas build --profile development --platform android
     4. [Hubungkan Firebase ke React Native](docs/Pertemuan%202/Hubungkan%20Firebase%20ke%20React%20Native.md)
     5. [Testing Login dan Logout React Native](docs/Pertemuan%202/Testing%20Login%20dan%20Logout%20React%20Native.md)
 - [Model EDOM](docs/Pertemuan%202/Model%20EDOM.md) — download model sentimen untuk `ai/`
+- [Push Notification dan Maps](docs/Pertemuan%203/Push%20%26%20Maps.md) — bahan pengantar notifikasi push dan peta
+- [Payment Gateway dengan Midtrans](docs/Pertemuan%204/Payment%20Gateway.md) — menyiapkan akun dan mencoba environment Sandbox
